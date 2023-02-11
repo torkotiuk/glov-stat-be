@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--  -->
+    <!-- Get date middleware -->
+    <p
+      class="codepen"
+      data-height="300"
+      data-default-tab="js"
+      data-slug-hash="OJwgyLY"
+      data-user="imitator"
+      style="
+        height: 300px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid;
+        margin: 1em 0;
+        padding: 1em;
+      "
+    >
+      <span
+        >See the Pen
+        <a href="https://codepen.io/imitator/pen/OJwgyLY">
+          node-js__getDate-middleware</a
+        >
+        by Andrii (<a href="https://codepen.io/imitator">@imitator</a>) on
+        <a href="https://codepen.io">CodePen</a>.</span
+      >
+    </p>
+    <script
+      async
+      src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+    ></script>
+    <!--  -->
+
+    <!--  -->
+    <!-- Node.js__all requests go through next middleware -->
+    <p
+      class="codepen"
+      data-height="300"
+      data-default-tab="js"
+      data-slug-hash="MWBoBRE"
+      data-user="imitator"
+      style="
+        height: 300px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid;
+        margin: 1em 0;
+        padding: 1em;
+      "
+    >
+      <span
+        >See the Pen
+        <a href="https://codepen.io/imitator/pen/MWBoBRE">
+          Node.js__all requests go through next middleware</a
+        >
+        by Andrii (<a href="https://codepen.io/imitator">@imitator</a>) on
+        <a href="https://codepen.io">CodePen</a>.</span
+      >
+    </p>
+    <script
+      async
+      src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+    ></script>
+    <!--  -->
+
+    <!-- START Backend web-server- guide -->
+    <h2>Backend web-server creation guide</h2>
+    <ol>
+      <li>Create github clean project & clone to your pc</li>
+    </ol>
+    <!-- END Backend web-server- guide -->
+
+    <!-- http request -->
+    <script>
+      const productsRequest = fetch('http://localhost:5555/products');
+
+      productsRequest
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Request error');
+          }
+          return response.json();
+        })
+        .then(result => console.log(result))
+        .catch(error => console.log(error));
+    </script>
+    <!-- ------------ -->
+  </body>
+</html>
