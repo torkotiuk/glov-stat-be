@@ -1,5 +1,6 @@
 const { v4 } = require('uuid');
 const products = require('../../data/products');
+const Joi = require('joi');
 
 const add = (req, res) => {
   const newProduct = { ...req.body, _id: v4() };
