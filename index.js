@@ -18,3 +18,16 @@ app.get('/', (_, res) => {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
+
+const mongoose = require('mongoose');
+const { DB_HOST } = process.env;
+
+mongoose
+  .connect(DB_HOST, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log('DataBase was connected successfully');
+  })
+  .catch(error => console.log(error));
